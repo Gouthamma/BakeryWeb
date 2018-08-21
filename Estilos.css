@@ -1,0 +1,99 @@
+﻿*{
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman';
+    color:black;
+    box-sizing:content-box;
+}
+header {
+    background:url(Img/pasteleria.jpg);
+}
+header h1
+{
+ color:sandybrown;
+ background:url(Img/pasteleria.jpg),content-box;
+ padding:20px;
+ text-align: center;
+ font-family:Calibri;
+ font:bold;
+}
+nav
+{
+    background-color:pink;
+}
+nav div img
+{
+    align-content:center;
+}
+nav h3
+{
+    color:green;
+    flex-direction:row;
+    width:200px;
+    display:inline;
+    margin:5px,0px;
+    cursor:pointer;
+    vertical-align:middle;
+}
+nav h3:hover
+{
+    background-color:aqua;
+
+}
+
+nav img
+{
+    border-radius: 50%;
+    height:30px;
+    padding: 5px;
+    vertical-align:middle;
+   
+}
+/*nav div
+{
+    border: 2px solid #666666;
+    position: absolute;
+    height:150px;
+    width: 150px;
+    visibility: hidden;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #111;
+    padding: 10px;
+    background-color:coral;
+
+}*/
+nav h3 img
+{
+   border: 2px solid #666666;
+    position:fixed;
+    height:150px;
+    width: 150px;
+    display:none;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #111;
+    padding: 10px,0px;
+    background-color:coral;
+    height:inherit;
+    background-color:burlywood;
+ flex-direction:column;
+ transition-delay:1s;
+ z-index:2;
+}
+
+
+section h2
+{
+    text-align: center;
+}
+
+
+
+
+footer img
+{
+    height: 20px;
+}
+
+footer p {
+    display: inline;
+}
