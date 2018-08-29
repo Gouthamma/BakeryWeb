@@ -3,12 +3,13 @@
 
 <head>
     <link href="Estilos.css" rel="stylesheet" />    
+    <script type="text/javascript" src="Codigo.js"></script>
     <title>Pastelería en Linea</title>
     <meta name="description" content="pedidos de pasteles y dulces"/>
     <meta name="keywords" content="pasteleria, dulces, tortas, a domicilio, a pedido" />
 	<meta charset="utf-8" />
     <style>
-        section {height:400px; border:1px solid grey;}
+        section {height:400px;}
     </style>
 </head>
 
@@ -16,22 +17,213 @@
     
     <header><h1 id="titulo"> Mi Serena Tentación </h1>
     </header>
-    
-    <nav> <img src="Img/rolesCanela1.jpg"> 
-    <h3 id="Roles"  onmouseover="document.getElementById('ImgRol').style.display = 'flex'"                                                
-        onmouseout="document.getElementById('ImgRol').style.display = 'none'">Roles de Canela <img id="ImgRol" src="Img/rolesCanela1.jpg" /></h3> 
-    
-    <img src="Img/Macarons.png" /> <h3 id="Macarons">Macarons</h3>
+    <!---->
+    <nav> 
+        <img src="Img/rolesCanela1.jpg"> 
+        <h3 id="Roles" onmouseover="document.getElementById('ImgRoles').style.display = 'flex'"
+            onmouseout="document.getElementById('ImgRoles').style.display = 'none'" 
+            onclick="document.getElementById('FormRoles').style.display='block',
+                     document.getElementById('FormMacarons').style.display = 'none'"> Roles de Canela 
+            <img id="ImgRoles" src="Img/rolesCanela1.jpg" />        
+        </h3>         
+         <img src="Img/Macarons.png" />                
+         <h3 id="Macarons" onmouseover="document.getElementById('ImgMacarons').style.display = 'flex'"
+             onmouseout="document.getElementById('ImgMacarons').style.display = 'none'"
+             onclick="document.getElementById('FormMacarons').style.display = 'block',
+                      document.getElementById('FormRoles').style.display = 'none'"
+             > Macarons
+            <img id="ImgMacarons" src="Img/Macarons.png" /> 
+        </h3>
+        <img src="Img/Macarons.png" />
+        <h3 id="Panqueque" onmouseover="document.getElementById('ImgPanqueque').style.display = 'flex'"
+            onmouseout="document.getElementById('ImgPanqueque').style.display = 'none'">
+            Panqueques
+            <img id="ImgPanqueque" src="Img/Macarons.png" />
+        </h3>
+        <img src="Img/Macarons.png" />
+        <h3 id="Sandwich" onmouseover="document.getElementById('ImgSandwich').style.display = 'flex'"
+            onmouseout="document.getElementById('ImgSandwich').style.display = 'none'">
+            Sandwich
+            <img id="ImgSandwich" src="Img/Macarons.png" />
+        </h3>
+        <img src="Img/Macarons.png" />
+        <h3 id="Helado" onmouseover="document.getElementById('ImgHelado').style.display = 'flex'"
+            onmouseout="document.getElementById('ImgHelado').style.display = 'none'">
+            Helado
+            <img id="ImgHelado" src="Img/Macarons.png" />
+        </h3>
     </nav>
     
-    <section>
+    <section>        
         <article>
             <h2> La pastelería OnLine de La Serena </h2>          
         </article>
+             
+        <form id="FormRoles">
+            <fieldset>
+                <legend>Seleccione su Rol</legend>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Rol de Canela <br /><input name="Rol" type="radio" value="500" onclick="actualizarValor(this.checked, 0, this.value);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Rol de Vainilla <br /><input name="Rol" type="radio" value="500" onclick="actualizarValor(this.checked, 0, this.value);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Rol de Chocolate <br /><input name="Rol" type="radio" value="500" onclick="actualizarValor(this.checked, 0, this.value);" /> </h3>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Indique su Agregado</legend>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Nuez<br /><input name="Sabor1" type="checkbox" value="Sabor1" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Almendra<br /><input name="Sabor2" type="checkbox" value="Sabor2" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Pasas<br /><input name="Sabor3" type="checkbox" value="Sabor3" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Platano<br /><input name="Sabor4" type="checkbox" value="Sabor4" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                </div>               
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Manzana<br /><input name="Sabor6" type="checkbox" value="Sabor6" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Desea una Cobertura??</legend>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Zyrup de Chocolate<br /><input name="Sabor1" type="checkbox" value="Sabor1" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Glaseado<br /><input name="Sabor2" type="checkbox" value="Sabor2" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                </div>       
+            </fieldset>
+
+            <fieldset>
+                <legend>Indique la cantidad que desea</legend>               
+                <div>
+                    <i>Precio Unitario</i><input width="500" type="text" readonly id="txtValor" value="0" />
+                </div>
+                <div>
+                    <label for="Cantidad">Cantidad</label><input id="Cantidad" name="Cantidad" type="number" />
+                </div>
+                <div>
+                    <i>Precio Total </i><input width="100" type="text" readonly id="txtTotal" value="0" />
+                </div>
+            </fieldset>
+        </form>
+
+
+        <form id="FormMacarons">
+            <fieldset>
+                <legend>Indique su sabor</legend>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 1<br /><input name="Sabor1" type="checkbox" value="Sabor1" /> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 2 <br /><input name="Sabor2" type="checkbox" value="Sabor2" /> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 3<br /><input name="Sabor3" type="checkbox" value="Sabor3" /></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 4<br /><input name="Sabor4" type="checkbox" value="Sabor4" /></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 5<br /><input name="Sabor5" type="checkbox" value="Sabor5" /></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 6<br /><input name="Sabor6" type="checkbox" value="Sabor6" /></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 7<br /><input name="Sabor6" type="checkbox" value="Sabor6" /></h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$500</figcaption>
+                    </figure>
+                    <h3>Sabor 8<br /><input name="Sabor6" type="checkbox" value="Sabor6" /></h3>
+                </div>
+            </fieldset>
+        </form>
+      
     </section>    
    
-    <footer> <img src="Img/whatsapp.png"/><p>+569 81480751</p>
-    </footer>
+
+
+
 
 </body>
 
