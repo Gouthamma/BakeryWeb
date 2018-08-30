@@ -1,11 +1,12 @@
-﻿function actualizarValor(estaChequeado, valor, valor1)
+﻿
+function actualizarValor(estaChequeado, valor)
 {
     // Variables.
     
     var suma_actual = 0;
     var campo_resultado = document.getElementById('txtValor');
     valor = parseInt(valor);
-    valor1 = parseInt(valor1);
+    valor1 = parseInt(document.getElementsByName('Rol'));
     var sumaTotal = suma_actual + valor1;
 
     // Obtener la suma que pueda tener el campo 'txtValor'.
