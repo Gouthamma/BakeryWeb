@@ -1,15 +1,11 @@
-﻿function capturar()
+﻿function capturar(elemento)
 {
     var resultado = 0;
 
-    var radio = document.getElementsByName("Rol");
-    // Recorremos todos los valores del radio button para encontrar el
-    // seleccionado
-    for (var i = 0; i < radio.length; i++)
-    {
-        if (radio[i].checked)
-            resultado = radio[i].value;
-    }
+    if (elemento.checked)
+            resultado = elemento.value;
+
+    
 }
 
 function actualizarValor(estaChequeado, valor)
