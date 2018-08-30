@@ -1,4 +1,17 @@
-﻿
+﻿function capturar()
+{
+    var resultado = 0;
+
+    var radio = document.getElementsByName("Rol");
+    // Recorremos todos los valores del radio button para encontrar el
+    // seleccionado
+    for (var i = 0; i < radio.length; i++)
+    {
+        if (radio[i].checked)
+            resultado = radio[i].value;
+    }
+}
+
 function actualizarValor(estaChequeado, valor)
 {
     // Variables.
@@ -6,7 +19,7 @@ function actualizarValor(estaChequeado, valor)
     var suma_actual = 0;
     var campo_resultado = document.getElementById('txtValor');
     valor = parseInt(valor);
-    valor1 = parseInt(document.getElementsByName('Rol'));
+    valor1 = parseInt(resultado);
     var sumaTotal = suma_actual + valor1;
 
     // Obtener la suma que pueda tener el campo 'txtValor'.
@@ -51,3 +64,4 @@ function sumaTotal(Precio, Cantidad)
     Total = parseint(Precio) * parseInt(Cantidad);
     txtTotal.value = Total;
 }
+
