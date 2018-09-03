@@ -115,7 +115,18 @@ figure img
     height:40px;
     width:40px;
 }
-
+#apoyo
+{
+    display:none;
+}
+#apoyoTotal
+{
+    display:none;
+}
+#apoyoCobertura
+{
+    display:none;
+}
 div h3
 {
     color:green;

@@ -49,109 +49,115 @@
         <img src="Img/Macarons.png" />
         <h3 id="Helado" onmouseover="document.getElementById('ImgHelado').style.display = 'flex'"
             onmouseout="document.getElementById('ImgHelado').style.display = 'none'">
-            Helado
+            Helados
             <img id="ImgHelado" src="Img/Macarons.png" />
         </h3>
     </nav>
     
     <section>        
         <article>
-            <h2> La pastelería OnLine de La Serena </h2>          
+            <h2> La Pastelería OnLine de La Serena </h2>          
         </article>
              
-        <form id="FormRoles">
+        <form id="FormRoles" onsubmit="this.reset()">
             <fieldset>
                 <legend>Seleccione su Rol</legend>
                 <div>
-                    <figure>
-                        <img src="Img/Macarons.png" />
-                        <figcaption>$300</figcaption>
-                    </figure>
-                    <h3>Rol de Canela <br /><input name="Rol" type="radio" value="300" onclick="capturar(this)"/> </h3>
-                </div>
-                <div>
-                    <figure>
-                        <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
-                    </figure>
-                    <h3>Rol de Vainilla <br /><input name="Rol" type="radio" value="500" onclick="capturar(this);"/> </h3>
-                </div>
-                <div>
+                    <input id="apoyo" type="text" readonly  value="0" />
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$400</figcaption>
                     </figure>
-                    <h3>Rol de Chocolate <br /><input name="Rol" type="radio" value="400" onclick="capturar(this);" /> </h3>
+                    <h3>Rol de Canela <br /><input name="Roles" type="radio" value="400" onclick="Rol(this);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$350</figcaption>
+                    </figure>
+                    <h3>Rol de Vainilla <br /><input name="Roles" type="radio" value="350" onclick="Rol(this);"/> </h3>
+                </div>
+                <div>
+                    <figure>
+                        <img src="Img/Macarons.png" />
+                        <figcaption>$450</figcaption>
+                    </figure>
+                    <h3>Rol de Chocolate <br /><input name="Roles" type="radio" value="450" onclick="Rol(this);" /> </h3>
                 </div>
             </fieldset>
             
             <fieldset>
                 <legend>Indique su Agregado</legend>
                 <div>
+                    <input id="apoyoTotal" type="text" readonly value="0" />
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$100</figcaption>
                     </figure>
-                    <h3>Nuez<br /><input name="Sabor1" type="checkbox" value="Sabor1" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                    <h3>Nuez<br /><input name="Nuez" type="checkbox" value="100" onclick="RolAgregado(this);"/> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$100</figcaption>
                     </figure>
-                    <h3>Almendra<br /><input name="Sabor2" type="checkbox" value="Sabor2" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                    <h3>Almendra<br /><input name="Sabor2" type="checkbox" value="100" onclick="RolAgregado(this);"/> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$120</figcaption>
                     </figure>
-                    <h3>Pasas<br /><input name="Sabor3" type="checkbox" value="Sabor3" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                    <h3>Pasas<br /><input name="Sabor3" type="checkbox" value="120" onclick="RolAgregado(this);"/></h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Platano<br /><input name="Sabor4" type="checkbox" value="Sabor4" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                    <h3>Platano<br /><input name="Sabor4" type="checkbox" value="50" onclick="RolAgregado(this);"/></h3>
                 </div>               
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Manzana<br /><input name="Sabor6" type="checkbox" value="Sabor6" onclick="actualizarValor(this.checked, this.value);"/></h3>
+                    <h3>Manzana<br /><input name="Sabor6" type="checkbox" value="50" onclick="RolAgregado(this);"/></h3>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Desea una Cobertura??</legend>
                 <div>
+                    <input id="apoyoCobertura" type="text" readonly value="0"/>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Zyrup de Chocolate<br /><input name="Sabor1" type="checkbox" value="Sabor1" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                    <h3>Zyrup de Chocolate<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);"/> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
-                        <figcaption>$500</figcaption>
+                        <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Glaseado<br /><input name="Sabor2" type="checkbox" value="Sabor2" onclick="actualizarValor(this.checked, this.value);"/> </h3>
+                    <h3>Glaseado<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);"/> </h3>
                 </div>       
             </fieldset>
 
             <fieldset>
                 <legend>Indique la cantidad que desea</legend>               
                 <div>
-                    <i>Precio Unitario</i><input width="500" type="text" readonly id="txtValor" value="0" />
+                    <i>Precio Unitario</i><input  id="txtValor" width="500" type="text" readonly value="0" />
                 </div>
                 <div>
-                    <label for="Cantidad">Cantidad</label><input id="Cantidad" name="Cantidad" type="number" />
+                    <label for="Cantidad">Cantidad</label><input id="Cantidad" type="number" value="0" min="0" max="10" onclick="valorTotal();"/>
                 </div>
                 <div>
-                    <i>Precio Total </i><input width="100" type="text" readonly id="txtTotal" value="0" />
+                    <i>Precio Total </i><input id="txtTotal" type="text" readonly  value="0" />
+                </div>
+                <div>
+                    <input id="enviarRol" type="submit" value="Aceptar" />
                 </div>
             </fieldset>
         </form>
