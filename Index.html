@@ -2,90 +2,88 @@
 <html lang="es">
 
 <head>
-    <link href="Estilos.css" rel="stylesheet" />    
+    <link href="Estilos.css" rel="stylesheet" />
     <script type="text/javascript" src="Codigo.js"></script>
     <title>Pastelería en Linea</title>
-    <meta name="description" content="pedidos de pasteles y dulces"/>
+    <meta name="description" content="pedidos de pasteles y dulces" />
     <meta name="keywords" content="pasteleria, dulces, tortas, a domicilio, a pedido" />
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <style>
         section {height:400px;}
     </style>
 </head>
 
 <body>
-    
-    <header><h1 id="titulo"> Mi Serena Tentación </h1>
+
+    <header>
+        <h1 id="titulo"> Mi Serena Tentación </h1>
     </header>
 
-    <nav> 
-        <img src="Img/rolesCanela1.jpg"> 
-        <h3 id="Roles" onmouseover="document.getElementById('ImgRoles').style.display = 'flex'"
-            onmouseout="document.getElementById('ImgRoles').style.display = 'none'" 
+    <nav>
+        <img src="Img/rolesCanela1.jpg">
+        <h3 id="Roles" onmouseover="document.getElementById('ImgRoles').style.display = 'flex'" onmouseout="document.getElementById('ImgRoles').style.display = 'none'"
             onclick="document.getElementById('FormRoles').style.display='block',
-                     document.getElementById('FormMacarons').style.display = 'none'"> Roles de Canela 
-            <img id="ImgRoles" src="Img/rolesCanela1.jpg" />        
-        </h3>         
-         <img src="Img/Macarons.png" />                
-         <h3 id="Macarons" onmouseover="document.getElementById('ImgMacarons').style.display = 'flex'"
-             onmouseout="document.getElementById('ImgMacarons').style.display = 'none'"
-             onclick="document.getElementById('FormMacarons').style.display = 'block',
-                      document.getElementById('FormRoles').style.display = 'none'"
-             > Macarons
-            <img id="ImgMacarons" src="Img/Macarons.png" /> 
+                     document.getElementById('FormMacarons').style.display = 'none'">
+            Roles de Canela
+            <img id="ImgRoles" src="Img/rolesCanela1.jpg" />
         </h3>
         <img src="Img/Macarons.png" />
-        <h3 id="Panqueque" onmouseover="document.getElementById('ImgPanqueque').style.display = 'flex'"
-            onmouseout="document.getElementById('ImgPanqueque').style.display = 'none'">
+        <h3 id="Macarons" onmouseover="document.getElementById('ImgMacarons').style.display = 'flex'" onmouseout="document.getElementById('ImgMacarons').style.display = 'none'"
+            onclick="document.getElementById('FormMacarons').style.display = 'block',
+                      document.getElementById('FormRoles').style.display = 'none'">
+            Macarons
+            <img id="ImgMacarons" src="Img/Macarons.png" />
+        </h3>
+        <img src="Img/Macarons.png" />
+        <h3 id="Panqueque" onmouseover="document.getElementById('ImgPanqueque').style.display = 'flex'" onmouseout="document.getElementById('ImgPanqueque').style.display = 'none'">
             Panqueques
             <img id="ImgPanqueque" src="Img/Macarons.png" />
         </h3>
         <img src="Img/Macarons.png" />
-        <h3 id="Sandwich" onmouseover="document.getElementById('ImgSandwich').style.display = 'flex'"
-            onmouseout="document.getElementById('ImgSandwich').style.display = 'none'">
+        <h3 id="Sandwich" onmouseover="document.getElementById('ImgSandwich').style.display = 'flex'" onmouseout="document.getElementById('ImgSandwich').style.display = 'none'">
             Sandwich
             <img id="ImgSandwich" src="Img/Macarons.png" />
         </h3>
         <img src="Img/Macarons.png" />
-        <h3 id="Helado" onmouseover="document.getElementById('ImgHelado').style.display = 'flex'"
-            onmouseout="document.getElementById('ImgHelado').style.display = 'none'">
+        <h3 id="Helado" onmouseover="document.getElementById('ImgHelado').style.display = 'flex'" onmouseout="document.getElementById('ImgHelado').style.display = 'none'">
             Helados
             <img id="ImgHelado" src="Img/Macarons.png" />
         </h3>
     </nav>
-    
-    <section>        
+
+    <section>
         <article>
-            <h2> La Pastelería OnLine de La Serena </h2>          
+            <h2> La Pastelería OnLine de La Serena </h2>
         </article>
-             
+
         <form id="FormRoles" onsubmit="this.reset()">
             <fieldset>
                 <legend>Seleccione su Rol</legend>
                 <div>
-                    <input id="apoyo" type="text" readonly  value="0" />
+                    <input id="apoyo" type="text" readonly value="0" />
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$400</figcaption>
                     </figure>
-                    <h3>Rol de Canela <br /><input name="Roles" type="radio" value="400" onclick="Rol(this);"/> </h3>
+                    <h3>Rol de Canela <br /><input name="Roles" type="radio" value="400" onclick="Rol(this);" /> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$350</figcaption>
                     </figure>
-                    <h3>Rol de Vainilla <br /><input name="Roles" type="radio" value="350" onclick="Rol(this);"/> </h3>
+                    <h3>Rol de Vainilla <br /><input name="Roles" type="radio" value="350" onclick="Rol(this);" /> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$450</figcaption>
                     </figure>
-                    <h3>Rol de Chocolate <br /><input name="Roles" type="radio" value="450" onclick="Rol(this);" /> </h3>
+                    <h3>Rol de Chocolate <br /><input name="Roles" type="radio" value="450" onclick="Rol(this);" />
+                    </h3>
                 </div>
             </fieldset>
-            
+
             <fieldset>
                 <legend>Indique su Agregado</legend>
                 <div>
@@ -94,67 +92,71 @@
                         <img src="Img/Macarons.png" />
                         <figcaption>$100</figcaption>
                     </figure>
-                    <h3>Nuez<br /><input name="Nuez" type="checkbox" value="100" onclick="RolAgregado(this);"/> </h3>
+                    <h3>Nuez<br /><input name="Nuez" type="checkbox" value="100" onclick="RolAgregado(this);" /> </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$100</figcaption>
                     </figure>
-                    <h3>Almendra<br /><input name="Sabor2" type="checkbox" value="100" onclick="RolAgregado(this);"/> </h3>
+                    <h3>Almendra<br /><input name="Sabor2" type="checkbox" value="100" onclick="RolAgregado(this);" />
+                    </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$120</figcaption>
                     </figure>
-                    <h3>Pasas<br /><input name="Sabor3" type="checkbox" value="120" onclick="RolAgregado(this);"/></h3>
+                    <h3>Pasas<br /><input name="Sabor3" type="checkbox" value="120" onclick="RolAgregado(this);" /></h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Platano<br /><input name="Sabor4" type="checkbox" value="50" onclick="RolAgregado(this);"/></h3>
-                </div>               
+                    <h3>Platano<br /><input name="Sabor4" type="checkbox" value="50" onclick="RolAgregado(this);" /></h3>
+                </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Manzana<br /><input name="Sabor6" type="checkbox" value="50" onclick="RolAgregado(this);"/></h3>
+                    <h3>Manzana<br /><input name="Sabor6" type="checkbox" value="50" onclick="RolAgregado(this);" /></h3>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Desea una Cobertura??</legend>
                 <div>
-                    <input id="apoyoCobertura" type="text" readonly value="0"/>
+                    <input id="apoyoCobertura" type="text" readonly value="0" />
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Zyrup de Chocolate<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);"/> </h3>
+                    <h3>Zyrup de Chocolate<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);" />
+                    </h3>
                 </div>
                 <div>
                     <figure>
                         <img src="Img/Macarons.png" />
                         <figcaption>$50</figcaption>
                     </figure>
-                    <h3>Glaseado<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);"/> </h3>
-                </div>       
+                    <h3>Glaseado<br /><input name="Cobertura" type="radio" value="50" onclick="rolCobertura(this);" />
+                    </h3>
+                </div>
             </fieldset>
 
             <fieldset>
-                <legend>Indique la cantidad que desea</legend>               
+                <legend>Indique la cantidad que desea</legend>
                 <div>
-                    <i>Precio Unitario</i><input  id="txtValor" width="500" type="text" readonly value="0" />
+                    <i>Precio Unitario</i><input id="txtValor" width="500" type="text" readonly value="0" />
                 </div>
                 <div>
-                    <label for="Cantidad">Cantidad</label><input id="Cantidad" type="number" value="0" min="0" max="10" onclick="valorTotal();"/>
+                    <label for="Cantidad">Cantidad</label><input id="Cantidad" type="number" value="0" min="0" max="10"
+                        onclick="valorTotal();" />
                 </div>
                 <div>
-                    <i>Precio Total </i><input id="txtTotal" type="text" readonly  value="0" />
+                    <i>Precio Total </i><input id="txtTotal" type="text" readonly value="0" />
                 </div>
                 <div>
                     <input id="enviarRol" type="submit" value="Aceptar" />
@@ -224,9 +226,9 @@
                 </div>
             </fieldset>
         </form>
-      
-    </section>    
-   
+
+    </section>
+
 
 
 
